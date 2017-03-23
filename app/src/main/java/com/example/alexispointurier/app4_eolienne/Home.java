@@ -1,5 +1,7 @@
 package com.example.alexispointurier.app4_eolienne;
 
+import android.bluetooth.BluetoothAdapter;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.PorterDuff;
 import android.os.Build;
@@ -36,6 +38,15 @@ public class Home extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+
+        // Bluetooth connection
+        BluetoothAdapter mBluetoothAdapter = BluetoothAdapter.getDefaultAdapter();
+        if (!mBluetoothAdapter.isEnabled()) {
+            Intent enableBtIntent = new Intent(BluetoothAdapter.ACTION_REQUEST_ENABLE);
+            startActivityForResult(enableBtIntent, 2);
+        }
+        ConnectThread.Init(mBluetoothAdapter);
+        ConnectThread.write("test");
 
         //Graph
         graph = (GraphView)findViewById(R.id.graphPower);
