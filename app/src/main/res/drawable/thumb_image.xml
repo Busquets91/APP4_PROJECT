@@ -9,6 +9,6 @@
             <solid android:color="@android:color/transparent" />
         </shape>
     </item>
-    <item android:drawable="@drawable/seekbar_thumb_material_anim"/>
+
 
 </layer-list>
