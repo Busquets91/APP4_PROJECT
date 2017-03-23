@@ -1,0 +1,175 @@
+
+    <ScrollView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/container"
+            android:isScrollContainer="true">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:padding="@dimen/paddingLayout"
+                android:layout_margin="@dimen/marginLayout"
+                android:background="@android:drawable/editbox_dropdown_light_frame">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAppearance="@style/TitleStyle"
+                    android:text="@string/titlePower"
+                    android:layout_weight="0.1"
+                    android:textAlignment="center"></TextView>
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spaceSize"/>
+
+                <com.jjoe64.graphview.GraphView
+                    android:layout_width="match_parent"
+                    android:layout_height="560dp"
+                    android:id="@+id/graphPower" />
+
+                <Space
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/spaceSize" />
+
+                <SeekBar
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:max="10"
+                    android:progress="3"
+                    android:id="@+id/powerChange"
+                    android:progressTint="@color/titleColor"
+                    android:thumbTint="@color/titleColor" />
+
+                <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.1">
+
+                    <TextView
+                        android:text="@string/lowPower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/lowPower"
+                        android:layout_weight="1"
+                        android:textColor="@color/titleColor"
+                        android:textStyle="normal|bold"
+                        android:paddingLeft="@dimen/paddingTextSeek" />
+
+                    <TextView
+                        android:text="@string/highPower"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/highPower"
+                        android:layout_weight="1"
+                        android:textAlignment="viewEnd"
+                        android:textStyle="normal|bold"
+                        android:textColor="@color/titleColor"
+                        android:paddingRight="@dimen/paddingTextSeek" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical"
+                android:layout_margin="@dimen/marginLayout"
+                android:padding="@dimen/paddingLayout"
+                android:background="@android:drawable/editbox_dropdown_light_frame">
+
+                <TableLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:shrinkColumns="*"  android:stretchColumns="*" android:background="#ffffff">
+
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="fill_parent"
+                        android:gravity="center_horizontal">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAppearance="@style/TitleStyle"
+                            android:text="@string/titleWind"
+                            android:layout_weight="0.1"
+                            android:layout_span="2"
+                            android:textAlignment="center"></TextView>
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:text="90"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/speedWind"
+                            android:gravity="center"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textStyle="normal|bold"
+                            android:textColor="@color/boxColor"
+                            android:textAlignment="center"
+                            android:textSize="50sp" />
+
+                        <TextView
+                            android:text="26"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/speedEo"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="@color/boxColor"
+                            android:textSize="50sp"
+                            android:gravity="center"
+                            android:textStyle="normal|bold" />
+
+                    </TableRow>
+                    <TableRow
+                        android:layout_height="wrap_content"
+                        android:layout_width="match_parent">
+
+                        <TextView
+                            android:text="km/h"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/unitWind"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:textColor="@color/boxColor"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                        <TextView
+                            android:text="t/min"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:id="@+id/unitEo"
+                            android:paddingLeft="30dp"
+                            android:paddingRight="30dp"
+                            android:textColor="@color/boxColor"
+                            android:textStyle="normal|bold"
+                            android:textSize="24sp" />
+
+                    </TableRow>
+                </TableLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+

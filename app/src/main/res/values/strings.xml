@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Eolienne</string>
+    <string name="titlePower"> Puissance</string>
+    <string name="titleWind"> Vent</string>
+    <string name="action_settings">Action</string>
+    <string name="lowPower">0V</string>
+    <string name="highPower">10V</string>
+</resources>
